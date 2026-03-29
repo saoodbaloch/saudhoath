@@ -1,0 +1,15 @@
+/* Resume.css */
+.resume-container {
+  background-color: #f9fafb; /* halka gray bg */
+  min-height: 100vh; /* full screen */
+  padding: 80px 20px; /* top-bottom spacing */
+}
+
+.resume-box {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px;
+}
