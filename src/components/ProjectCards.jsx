@@ -22,7 +22,7 @@ const projects = [
     title: "E-Book Store Website",
     category: "Online Bookstore",
     image: ebook4,
-    link: "https://ebook2.lovestoblog.com/",
+    link: "https://e-book.iceiy.com/",
   },
 ];
 
