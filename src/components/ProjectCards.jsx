@@ -10,7 +10,7 @@ const projects = [
     title: "Animation Kids Website",
     category: "Kids Channel Website",
     image: kidstv,
-    link: "https://kidstv.free.nf/",
+    link: "https://kids-tv.hstn.me/",
   },
   {
     title: "Medical Billing Website",
