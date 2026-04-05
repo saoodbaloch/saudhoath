@@ -56,7 +56,7 @@ export const projects = [
   title: "Uni-E-Book store Website",
   category: "Online Bookstore",
   image: uniebook,
-  link: "https://e-book.iceiy.com/",
+  link: "https://unibook.iceiy.com/",
 },
 
 {
