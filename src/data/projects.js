@@ -26,7 +26,7 @@ export const projects = [
     title: "E-Book Store Website",
     category: "Online Bookstore",
     image: ebook4,
-    link: "https://book.yzz.me/",
+    link: "https://e-book.zya.me/",
   },
   {
   title: "Techonza 10 - Coupon Website",
