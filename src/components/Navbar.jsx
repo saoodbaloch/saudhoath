@@ -3,7 +3,7 @@ import { FaTwitter, FaLinkedin, FaFacebook, FaInstagram, FaWhatsapp } from "reac
 import { NavLink } from "react-router-dom";
 import { FiMenu } from "react-icons/fi";
 import "./navbar.css";
-import saoodlogo from "../assets/sad@3x.png";
+import saoodlogo from "../assets/saoodrazzaq.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);      // animation state
@@ -54,7 +54,7 @@ const Navbar = () => {
           <NavLink to="/CaseStudy" className={({ isActive }) =>
             isActive ? "text-gray-400" : "hover:text-gray-200"
           }>
-            CaseStudy
+            caseStudy
           </NavLink>
         </li>
         <li className="relative">
