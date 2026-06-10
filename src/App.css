@@ -14,3 +14,84 @@ body, #root {
   padding: 0;
   overflow-x: hidden; /* ✅ no horizontal scroll */
 }
+
+/* ===== SCROLL TO TOP ===== */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+  width: 48px;
+  height: 48px;
+  background-color: #111;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  /* Hidden state */
+  opacity: 0;
+  transform: translateY(20px) scale(0.8);
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.4s ease, background-color 0.3s ease;
+}
+
+/* Visible state */
+.scroll-top-btn.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: all;
+}
+
+/* Hover */
+.scroll-top-btn:hover {
+  background-color: #333;
+}
+
+.scroll-top-btn:hover .arrow-icon {
+  animation: bounce-arrow 0.6s ease infinite;
+}
+
+/* Click — launch up and off screen */
+.scroll-top-btn.launch {
+  animation: launch-up 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  pointer-events: none;
+}
+
+/* Arrow bounce on hover */
+@keyframes bounce-arrow {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-4px); }
+}
+
+/* Launch off screen to top-right */
+@keyframes launch-up {
+  0%   { 
+    transform: translateY(0) scale(1); 
+    opacity: 1; 
+  }
+  40%  { 
+    transform: translateY(-20px) scale(1.1); 
+    opacity: 1; 
+  }
+  100% { 
+    transform: translateY(-120vh) translateX(30px) scale(0.4); 
+    opacity: 0; 
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .scroll-top-btn {
+    bottom: 24px;
+    right: 16px;
+    width: 44px;
+    height: 44px;
+    font-size: 17px;
+  }
+}

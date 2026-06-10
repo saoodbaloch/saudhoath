@@ -1,3 +1,8 @@
+/* =====================================================
+   portfolio.css — Header / About section styles only
+   Projects grid styles → portfolioGrid.css
+   ===================================================== */
+
 .portfolio-section {
   margin-top: 50px;
   width: 100%;
@@ -18,43 +23,47 @@
   width: 100%;
   gap: 40px;
   flex-wrap: wrap;
-  flex-direction: row-reverse; /* 👈 Image RIGHT, Text LEFT */
+  flex-direction: row-reverse; /* Image RIGHT, Text LEFT */
 }
 
-/* Right Image */
+/* ── Right Image ── */
 .portfolio-img {
   flex: 1;
   display: flex;
   justify-content: center;
 }
+
 .portfolio-img img {
   max-width: 400px;
   width: 100%;
   border-radius: 10px;
 }
 
-/* Left Text */
+/* ── Left Text ── */
 .portfolio-text {
   flex: 1;
 }
+
 .portfolio-text h2 {
   font-size: 4rem;
   font-weight: 700;
   margin-bottom: 10px;
 }
+
 .portfolio-text h3 {
   font-size: 1.5rem;
   font-weight: 400;
   color: #666;
   margin-bottom: 20px;
 }
+
 .portfolio-text p {
   font-size: 1rem;
   line-height: 1.6;
   color: #444;
 }
 
-/* ---- Animations ---- */
+/* ── Animations ── */
 .animate-left {
   opacity: 0;
   transform: translateX(100%);
@@ -66,42 +75,6 @@
   transform: translateX(-100%);
   animation: slideInRight 1s ease forwards;
   animation-delay: 0.3s;
-}
-
-/* Projects Section */
-.projects-section {
-  background-color: #FAFAFA; /* Tumhara desired color */
-}
-
-/* Project Cards (Outer container) */
-.projects-grid a {
-  border: 1px solid #e5e7eb; /* smooth light border */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* lighter shadow */
-  transition: all 0.3s ease-in-out;
-}
-
-/* Hover effect – smoother and lighter */
-.projects-grid a:hover {
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  transform: translateY(-4px);
-  border-color: #d1d5db;
-}
-
-/* Image wrapper background to match Adham’s look */
-.projects-grid a .p-2 {
-  background-color: #f9fafb; /* light neutral tone */
-  padding: 20px; /* adds space so image doesn’t touch edges */
-  border-radius: 16px 16px 0 0;
-}
-
-/* Image itself – centered and smooth corners */
-.projects-grid a img {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  object-fit: cover;
-  background: #fff; /* keeps corners white like Adham’s design */
-  box-shadow: 0 0 0 1px rgba(229, 231, 235, 0.6);
 }
 
 @keyframes slideInLeft {
@@ -118,11 +91,11 @@
   }
 }
 
-/* ✅ Mobile Responsive */
+/* ── Mobile Responsive ── */
 @media (max-width: 768px) {
   .portfolio-section {
-    padding-top: 50px;   /* 👈 upar ka gap kam */
-    min-height: auto;    /* 👈 100vh hata diya mobile pe */
+    padding-top: 50px;
+    min-height: auto;
   }
 
   .portfolio-container {
@@ -154,9 +127,11 @@
   .portfolio-text h2 {
     font-size: 1.6rem;
   }
+
   .portfolio-text h3 {
     font-size: 1rem;
   }
+
   .portfolio-text p {
     font-size: 0.9rem;
   }

@@ -1,0 +1,335 @@
+/* =====================================================
+   GymPosSystem.css — Case Study Page Styles
+   ===================================================== */
+
+/* ── Page wrapper ── */
+.gps-page {
+    width: 100%;
+    min-height: 100vh;
+    background: #f5f5f3;
+    padding: 60px 20px 100px;
+    box-sizing: border-box;
+}
+
+/* ── Main card ── */
+.gps-container {
+    max-width: 860px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 24px;
+    border: 1px solid #e4e4e0;
+    padding: 56px 64px;
+    box-sizing: border-box;
+}
+
+/* ── Back button ── */
+.gps-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #999994;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-bottom: 48px;
+    transition: color 0.2s ease;
+}
+
+.gps-back:hover {
+    color: #111110;
+}
+
+/* ── Hero ── */
+.gps-hero {
+    margin-bottom: 56px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #efefeb;
+}
+
+.gps-hero-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #888884;
+    background: #f3f3f0;
+    padding: 4px 12px;
+    border-radius: 999px;
+    margin-bottom: 20px;
+}
+
+.gps-hero-title {
+    font-size: 2.6rem;
+    font-weight: 800;
+    color: #111110;
+    line-height: 1.15;
+    margin: 0 0 16px;
+}
+
+.gps-hero-sub {
+    font-size: 1rem;
+    color: #666662;
+    line-height: 1.7;
+    max-width: 600px;
+    margin: 0;
+}
+
+/* ── Section ── */
+.gps-section {
+    margin-bottom: 44px;
+}
+
+.gps-section-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #111110;
+    margin: 0 0 14px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #111110;
+    display: inline-block;
+}
+
+.gps-section-body {
+    font-size: 0.95rem;
+    color: #555552;
+    line-height: 1.8;
+}
+
+.gps-section-body strong {
+    color: #111110;
+    font-weight: 600;
+}
+
+.gps-inline-p {
+    margin-top: 8px;
+}
+
+/* ── List ── */
+.gps-list {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.gps-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.93rem;
+    color: #555552;
+    line-height: 1.6;
+}
+
+.gps-list li::before {
+    content: "→";
+    color: #111110;
+    font-weight: 600;
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+/* ── Code block ── */
+.gps-pre {
+    background: #f3f3f0;
+    border: 1px solid #e4e4e0;
+    border-radius: 10px;
+    padding: 18px 20px;
+    font-size: 0.85rem;
+    color: #333330;
+    margin-top: 16px;
+    white-space: pre-wrap;
+    word-break: break-word;
+    overflow-x: auto;
+    line-height: 1.7;
+}
+
+/* ── Image block ── */
+.gps-img-block {
+    margin: 36px 0;
+    text-align: center;
+}
+
+.gps-img-label {
+    font-size: 12px;
+    font-weight: 500;
+    color: #999994;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+}
+
+.gps-img {
+    width: 100%;
+    max-width: 680px;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid #e4e4e0;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    display: block;
+    margin: 0 auto;
+}
+
+.gps-img:hover {
+    transform: scale(1.015);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+.gps-img-hint {
+    display: block;
+    font-size: 11px;
+    color: #bbbbba;
+    margin-top: 8px;
+    letter-spacing: 0.03em;
+}
+
+/* ── Lightbox ── */
+.gps-lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.88);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    cursor: zoom-out;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+.gps-lightbox-img {
+    max-width: 92%;
+    max-height: 90vh;
+    border-radius: 12px;
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.5);
+    object-fit: contain;
+}
+
+/* ── Project links ── */
+.gps-links {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}
+
+.gps-link-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 9px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.gps-link-outline {
+    background: transparent;
+    border: 1px solid #d4d4d0;
+    color: #444442;
+}
+
+.gps-link-outline:hover {
+    background: #f0f0ec;
+    border-color: #aaaaaa;
+    color: #111110;
+}
+
+.gps-link-solid {
+    background: #111110;
+    border: 1px solid #111110;
+    color: #ffffff;
+}
+
+.gps-link-solid:hover {
+    background: #333330;
+}
+
+/* ── Brutal Truth ── */
+.gps-brutal {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 60px;
+    padding-top: 40px;
+    border-top: 1px solid #efefeb;
+}
+
+.gps-brutal {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.gps-brutal-text {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    line-height: 1.8;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+    .gps-container {
+        padding: 36px 24px;
+        border-radius: 16px;
+    }
+
+    .gps-hero-title {
+        font-size: 1.8rem;
+    }
+
+    .gps-brutal {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+    }
+
+    .gps-brutal-text {
+        white-space: normal;
+    }
+
+    .gps-brutal-line {
+        width: 60px;
+        flex: none;
+    }
+
+    .gps-links {
+        flex-direction: column;
+    }
+
+    .gps-link-btn {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .gps-page {
+        padding: 30px 12px 80px;
+    }
+
+    .gps-hero-title {
+        font-size: 1.5rem;
+    }
+
+    .gps-section-title {
+        font-size: 1.15rem;
+    }
+
+}

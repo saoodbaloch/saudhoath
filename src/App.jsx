@@ -8,9 +8,11 @@ import About from "./pages/About";
 import Portfolio from "./pages/Portfolio";
 import CaseStudy from "./pages/CaseStudy";
 import Resume from "./pages/Resume";
+import ScrollToTop from "./components/ScrollToTop"
 
 import GymPosSystem from "./pages/caseStudy/gymPosSystem";
 import GeoSpeak from "./pages/caseStudy/geoSpeak";
+import LMS from "./pages/caseStudy/LMS";
 
 import "./App.css";
 import "./output.css";
@@ -37,10 +39,15 @@ function App() {
               path="/case-study/geospeak-ai"
               element={<GeoSpeak />}
             />
+            <Route
+              path="/case-study/LMS"
+              element={<LMS />}
+            />
             <Route path="/resume" element={<Resume />} />
           </Routes>
         </main>
         <Footer />
+        <ScrollToTop />
       </div>
     </Router>
   );

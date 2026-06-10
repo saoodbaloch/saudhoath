@@ -1,13 +1,17 @@
+/* =====================================================
+   about.css — About page styles
+   Matches portfolio.css + caseStudy.css theme
+   ===================================================== */
+
+/* ── About Section ── */
 .about-section {
   width: 100%;
-  min-height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
   background: #fff;
-   border: 1px solid #e5e7eb;
-  box-shadow: none;
-  padding: 60px 20px;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 80px 20px 0;
 }
 
 .about-container {
@@ -16,9 +20,10 @@
   justify-content: space-between;
   max-width: 1100px;
   width: 100%;
-  gap: 40px;
+  gap: 60px;
   flex-wrap: wrap;
-  flex-direction: row-reverse; /* 👈 Image RIGHT, Text LEFT */
+  flex-direction: row-reverse; /* Image RIGHT, Text LEFT */
+  padding-bottom: 60px;
 }
 
 /* Right Image */
@@ -27,34 +32,55 @@
   display: flex;
   justify-content: center;
 }
+
 .about-img img {
   max-width: 400px;
   width: 100%;
-  border-radius: 10px;
+  border-radius: 12px;
 }
 
 /* Left Text */
 .about-text {
   flex: 1;
+  min-width: 280px;
 }
+
 .about-text h2 {
   font-size: 4rem;
   font-weight: 700;
-  margin-bottom: 10px;
-}
-.about-text h3 {
-  font-size: 1.5rem;
-  font-weight: 400;
-  color: #666;
-  margin-bottom: 20px;
-}
-.about-text p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #444;
+  color: #111110;
+  margin-bottom: 12px;
 }
 
-/* ---- Animations ---- */
+.about-text h3 {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #666662;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.about-text p {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #555552;
+}
+
+.about-text strong {
+  color: #111110;
+  font-weight: 600;
+}
+
+/* ── Divider ── */
+.section-divider {
+  width: 100%;
+  max-width: 1100px;
+  height: 1px;
+  background: #e5e7eb;
+  margin: 0 auto;
+}
+
+/* ── Animations ── */
 .animate-left {
   opacity: 0;
   transform: translateX(100%);
@@ -71,175 +97,190 @@
 @keyframes slideInLeft {
   to {
     opacity: 1;
-    transform: translateX(0); /* 👈 Apni jagah pe */
+    transform: translateX(0);
   }
 }
 
 @keyframes slideInRight {
   to {
     opacity: 1;
-    transform: translateX(0); /* 👈 Apni jagah pe */
+    transform: translateX(0);
   }
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .about-container {
-    flex-direction: column;
-    text-align: center;
-  }
-  .about-text h2 {
-    font-size: 3rem;
-  }
-}
-
-/* Project Section */
-.project-section {
+/* ── Project Section ── */
+.about-project-section {
   width: 100%;
-  min-height: auto;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
   background: #fff;
-  border: 1px solid #e5e7eb;
-  padding: 40px 20px;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 80px 20px 0;
 }
 
-.project-container {
+.about-project-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   max-width: 1100px;
   width: 100%;
-  gap: 40px;
+  gap: 60px;
   flex-wrap: wrap;
+  padding-bottom: 60px;
 }
 
-.project-img {
+/* Project Image */
+.about-project-img {
   flex: 1;
   display: flex;
   justify-content: center;
 }
-.project-img img {
-  max-width: 400px;
+
+.about-project-img img {
+  max-width: 420px;
   width: 100%;
-  border-radius: 10px;
+  border-radius: 12px;
+  border: 1px solid #e4e4e0;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
 }
 
-.project-text {
+/* Project Text */
+.about-project-text {
   flex: 1;
-}
-.project-text h2 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 10px;
-  border-bottom: 2px solid black;
-  display: inline-block;
-  padding-bottom: 5px;
-}
-.project-text h3 {
-  font-size: 1.3rem;
-  font-weight: 500;
-  color: #444;
-  margin-bottom: 15px;
-}
-.project-text p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #333;
-  margin-bottom: 20px;
+  min-width: 280px;
 }
 
-/* Buttons */
-.project-buttons {
+.about-project-text h2 {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #111110;
+  margin-bottom: 12px;
+}
+
+.about-project-text h3 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #444442;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.about-project-text p {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #555552;
+  margin-bottom: 28px;
+}
+
+.about-project-text strong {
+  color: #111110;
+  font-weight: 600;
+}
+
+/* ── Buttons ── */
+.about-project-btns {
   display: flex;
-  gap: 15px;
+  gap: 12px;
   flex-wrap: wrap;
 }
-.project-buttons a {
-  padding: 10px 20px;
-  font-size: 1rem;
-  font-weight: 600;
-  border-radius: 8px;
-  border: 2px solid black;
-  transition: all 0.3s ease;
+
+.about-btn-solid,
+.about-btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 9px;
   text-decoration: none;
-}
-.btn-demo {
-  background: black;
-  color: white;
-}
-.btn-demo:hover {
-  background: white;
-  color: black;
-}
-.btn-code {
-  background: white;
-  color: black;
-}
-.btn-code:hover {
-  background: black;
-  color: white;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  cursor: pointer;
 }
 
-/* Mobile Responsive Fix */
+.about-btn-solid {
+  background: #111110;
+  border: 1px solid #111110;
+  color: #ffffff;
+}
+
+.about-btn-solid:hover {
+  background: #333330;
+  border-color: #333330;
+}
+
+.about-btn-outline {
+  background: transparent;
+  border: 1px solid #d4d4d0;
+  color: #444442;
+}
+
+.about-btn-outline:hover {
+  background: #f0f0ec;
+  border-color: #aaaaaa;
+  color: #111110;
+}
+
+/* ── Responsive ── */
 @media (max-width: 768px) {
-  .about-section {
-    padding-top: 100px;   /* 👈 upar ka gap kam */
-    min-height: auto;    /* 👈 100vh hata diya */
+  .about-section,
+  .about-project-section {
+    padding: 60px 20px 0;
   }
+
   .about-container,
-  .project-container {
-    flex-direction: column;   /* ✅ side by side ki jagah stack */
+  .about-project-container {
+    flex-direction: column;
     text-align: center;
-    max-width: 100%;          /* ✅ container screen ke andar */
-    padding: 0 15px;          /* ✅ thoda side spacing */
+    gap: 32px;
+    padding-bottom: 48px;
   }
 
   .about-img img,
-  .project-img img {
-    max-width: 90%;           /* ✅ fit screen */
-    height: auto;
+  .about-project-img img {
+    max-width: 85%;
   }
 
   .about-text h2,
-  .project-text h2 {
-    font-size: 2rem;
+  .about-project-text h2 {
+    font-size: 2.8rem;
   }
 
   .about-text h3,
-  .project-text h3 {
+  .about-project-text h3 {
     font-size: 1.2rem;
   }
 
-  .about-text p,
-  .project-text p {
-    font-size: 1rem;
-  }
-
-  .project-buttons {
+  .about-project-btns {
     justify-content: center;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .project-buttons a {
-    width: 100%;
-    text-align: center;
   }
 }
 
 @media (max-width: 480px) {
   .about-text h2,
-  .project-text h2 {
-    font-size: 1.6rem;
+  .about-project-text h2 {
+    font-size: 2rem;
   }
+
   .about-text h3,
-  .project-text h3 {
+  .about-project-text h3 {
     font-size: 1rem;
   }
+
   .about-text p,
-  .project-text p {
+  .about-project-text p {
     font-size: 0.9rem;
+  }
+
+  .about-project-btns {
+    flex-direction: column;
+  }
+
+  .about-btn-solid,
+  .about-btn-outline {
+    justify-content: center;
+    width: 100%;
   }
 }
